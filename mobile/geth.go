@@ -142,6 +142,8 @@ func NewNode(datadir string, config *NodeConfig) (stack *Node, _ error) {
 			NAT:              nat.Any(),
 			MaxPeers:         config.MaxPeers,
 		},
+		HTTPHost: "127.0.0.1",
+		HTTPPort: 8545,
 	}
 
 	rawStack, err := node.New(nodeConf)
